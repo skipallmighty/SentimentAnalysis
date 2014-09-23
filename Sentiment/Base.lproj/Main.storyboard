@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eZv-BU-b5q">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="vIs-h9-5UY">
+            <objects>
+                <tableViewController id="hID-ae-vv6" customClass="ViewController" customModule="Sentiment" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="B9g-Se-Xjr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" textLabel="ZPC-1T-4GU" detailTextLabel="MUJ-YW-cTZ" style="IBUITableViewCellStyleSubtitle" id="TOM-HI-7FY">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TOM-HI-7FY" id="sd4-RC-e0q">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZPC-1T-4GU">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MUJ-YW-cTZ">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Vej-wE-QDv" kind="show" id="Su0-9p-h9m"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hID-ae-vv6" id="cZd-ID-G3M"/>
+                            <outlet property="delegate" destination="hID-ae-vv6" id="wfJ-f5-S0X"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="8V9-zH-IDt"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eh7-nH-CTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="576" y="216"/>
+        </scene>
+        <!--Detail View-->
+        <scene sceneID="bSB-le-6nC">
+            <objects>
+                <viewController id="Vej-wE-QDv" customClass="DetailView" customModule="Sentiment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PcP-LD-1qa"/>
+                        <viewControllerLayoutGuide type="bottom" id="u0P-kW-uqV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P0Y-jR-E2c">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccm-73-2yg">
+                                <rect key="frame" x="22" y="485" width="562" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="eiB-fJ-USM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sM4-Bf-gtX">
+                                <rect key="frame" x="257.5" y="82" width="72" height="154"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d59-yI-55b">
+                                <rect key="frame" x="22" y="293" width="556" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="0hb-S1-91c"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ccm-73-2yg" firstAttribute="leading" secondItem="d59-yI-55b" secondAttribute="leading" id="48u-rf-gvt"/>
+                            <constraint firstAttribute="centerX" secondItem="ccm-73-2yg" secondAttribute="centerX" constant="-3" id="6UH-ua-tmD"/>
+                            <constraint firstItem="d59-yI-55b" firstAttribute="top" secondItem="sM4-Bf-gtX" secondAttribute="bottom" constant="57" id="8AS-ig-Tfs"/>
+                            <constraint firstAttribute="centerX" secondItem="d59-yI-55b" secondAttribute="centerX" id="HyT-wd-RAx"/>
+                            <constraint firstItem="ccm-73-2yg" firstAttribute="trailing" secondItem="P0Y-jR-E2c" secondAttribute="trailingMargin" id="JH7-l8-PuG"/>
+                            <constraint firstAttribute="centerX" secondItem="sM4-Bf-gtX" secondAttribute="centerX" constant="6.5" id="YiM-DH-7qd"/>
+                            <constraint firstItem="u0P-kW-uqV" firstAttribute="top" secondItem="ccm-73-2yg" secondAttribute="bottom" constant="94" id="YtR-4s-Bmw"/>
+                            <constraint firstItem="sM4-Bf-gtX" firstAttribute="top" secondItem="PcP-LD-1qa" secondAttribute="bottom" constant="18" id="cUz-W6-hwb"/>
+                            <constraint firstItem="ccm-73-2yg" firstAttribute="top" secondItem="d59-yI-55b" secondAttribute="bottom" constant="64" id="yZk-Ye-iF7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="commentBody" destination="d59-yI-55b" id="Qpi-1h-nK7"/>
+                        <outlet property="sentiment" destination="sM4-Bf-gtX" id="K6c-tb-u84"/>
+                        <outlet property="userLabel" destination="ccm-73-2yg" id="kBH-Kq-1sw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="adO-7a-OfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1265" y="216"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mf4-EE-s96">
+            <objects>
+                <navigationController id="eZv-BU-b5q" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sw5-Xx-K6x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hID-ae-vv6" kind="relationship" relationship="rootViewController" id="O9l-Wp-fDe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7dW-RY-Ztr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-244" y="216"/>
+        </scene>
+    </scenes>
+</document>
